@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="coins.jpg">
+</head>
+<body>
+    <div id="container">
+        <h1>Compound Interest Calculator</h1>
+        
+        <label for="calculatorMode">Mode:</label>
+        <select id="calculatorMode">
+            <option value="contributions">Contributions</option>
+            <option value="withdrawals">Withdrawals</option>
+        </select>
+
+        <div id="currencySelectorContainer">
+            <label for="currencySelector">Currency:</label>
+            <select id="currencySelector">
+                <option value="SEK">Swedish Krona (SEK)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="CNY">Chinese Yuan (CNY)</option>
+                <option value="THB">Thai Baht (THB)</option>
+            </select>
+        </div>
+
+        <label for="ogAmount">Current savings:</label>
+        <input type="number" id="ogAmount" min="0" step="1000" value="100000">
+
+        <label id="monthlyLabel" for="mCont">Monthly contributions:</label>
+        <input type="number" id="mCont" min="0" step="100" value="1000">
+
+        <label for="tSaving">Number of years saving (1-60):</label>
+        <input type="range" id="tSaving" min="1" max="60" value="30">
+        <span id="tSavingValue"></span>
+
+        <label for="numAccounts">Number of accounts (1-5):</label>
+        <input type="number" id="numAccounts" min="1" max="5" value="1">
+
+        <div id="accountsSetup"></div>
+
+        <div id="inflationToggle">
+            <label for="inflationCheckbox">Account for inflation (2% per year):</label>
+            <input type="checkbox" id="inflationCheckbox">
+        </div>
+
+        <div id="results">
+            <h2>Results:</h2>
+            <div id="finalAmount" class="result-row positive"></div>
+            <div id="totalContributions" class="result-row positive"></div>
+            <div id="totalInterest" class="result-row positive"></div>
+            <div class="interest-box">
+                <div id="weightedAverageInterest"></div>
+                <div id="totalInterestPercentage"></div>
+            </div>
+            <div id="moneyLostToInflation" class="result-row negative"></div>
+            <div id="finalAmountAfterInflation" class="result-row"></div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

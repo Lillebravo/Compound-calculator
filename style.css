@@ -1,0 +1,174 @@
+body {
+  background-image: url("compound_background_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+#container {
+  width: 600px;
+  padding: 30px;
+  border: 1px solid #b6c7d6;
+  border-radius: 20px;
+  background-color: rgba(173, 201, 197, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="range"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #b6c7d6;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+#inflationToggle {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#inflationToggle label {
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+#inflationCheckbox {
+  width: auto;
+  margin-bottom: 0;
+}
+
+#accountsSetup {
+  margin-top: 20px;
+  border-top: 1px solid #b6c7d6;
+  padding-top: 20px;
+}
+
+.account-setup {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.account-setup:only-child {
+  margin-bottom: 0;
+}
+
+#results {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#results h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.result-row {
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.result-row.positive {
+  background-color: rgba(39, 174, 96, 0.2);
+  border-left: 5px solid #27ae60;
+}
+
+.result-row.negative {
+  background-color: rgba(231, 76, 60, 0.2);
+  border-left: 5px solid #e74c3c;
+}
+
+#finalAmount {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+#totalInterest {
+  color: #2980b9;
+}
+
+.interest-box {
+  background-color: rgba(142, 68, 173, 0.1);
+  border: 1px solid #8e44ad;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#weightedAverageInterest,
+#totalInterestPercentage {
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  #container {
+      width: 90%;
+      padding: 20px;
+  }
+}
